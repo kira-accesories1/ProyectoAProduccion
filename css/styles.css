@@ -164,14 +164,13 @@ main {
     20px 20px 4px #e47fae;
 }
 
+.fotoprod {
+  object-fit: cover;
+}
+
 .card {
   box-shadow: 0 0 20px rgba(0, 0, 0, 1);
   border: none;
-}
-
-.card-img-top{
-  width: 100%;
-  height: 250px;
 }
 
 .card-body {
@@ -183,7 +182,7 @@ main {
 }
 
 .nombreproducto {
-  font-size: 20px;
+  font-size: 2em;
 }
 
 .enFaltaEtiqueta {
@@ -253,10 +252,15 @@ footer {
   box-shadow: 0 0 20px rgba(0, 0, 0, 1);
 }
 
-@media (max-width: 992px){ 
 .cartaproducto {
-  width: 244px;
-  height: 410px;
+  width: 20rem;
+  margin: 1.5vw;
+  font-size: 1em;
+}
+
+@media (max-width: 1119px){ 
+.cartaproducto {
+  width: 15rem;
 }
 }
 
@@ -264,83 +268,36 @@ footer {
   #buscador {
     width: 160px;
   }
-
-  .cartaproducto {
-  width: 200px;
-  height: 370px;
-}
-
-#fotoproducto {
-    width: 200px;
-  height: 220px;
-}
-}
-
-@media (max-width: 790px){ 
-.cartaproducto {
-  width: 180px;
-  height: 330px;
-}
-
-#fotoproducto {
-    width: 180px;
-  height: 200px;
-}
-}
-
-@media (max-width: 732px){ 
-.cartaproducto {
-  width: 150px;
-  height: 250px;
-}
-
-#fotoproducto {
-    width: 150px;
-  height: 140px;
-}
 }
 
 @media (max-width: 650px){ 
-.cartaproducto {
-  width: 130px;
-  height: 200px;
-}
 
-#fotoproducto {
-    width: 130px;
-  height: 110px;
-}
-
-.cartaproducto {
-  font-size: 10px;
-}
-
-#menuDerecho {
-  width: 300px;
+.menuDerecha {
+  width: 300px !important;
 }
 }
 
 @media (width<600px){
   #logo {
     height: 45px;
-    width: 45px;
+    width: 49px;
   }
 
   #buscador {
     width: 120px;
   }
 
-  .cartaproducto {
-  width: 110px;
-  height: 200px;
+.menuDerecha {
+  width: 250px !important;
 }
 
-#fotoproducto {
-    width: 110px;
-  height: 80px;
+.cartaproducto {
+  width: 13rem;
+}
 }
 
-#menuDerecho {
-  width: 250px;
+@media (width<528px){
+.cartaproducto {
+  width: 10rem;
 }
 }

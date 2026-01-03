@@ -101,7 +101,7 @@ function putproductosConStock(producto,boolPush) {
             data-tipo=${producto.tipoproducto}
         >
         <div class="card animate-hover-card">
-            <img src=${producto.imagen} class="card-img-top" alt="foto producto" id="fotoproducto">
+            <img src=${producto.imagen} class="fotoprod img-fluid" alt="foto producto" id="fotoproducto">
             <div class="d-flex px-2">
             <div class="card-body py-1 col-8">
                 <p class="text-center nombreproducto mb-1">${producto.nombre}</p>
