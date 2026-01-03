@@ -28,193 +28,129 @@
 
     <body class="background">
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-dark bg-dark py-2 sticky-top gapNav fuenteLobster">
-            <div class="d-flex align-items-center ms-4 navLogoDiv">
-                <img src="media/logoKira.png" class="img-fluid" alt="logo" id="logo">             
-            </div>
-            <div class="d-flex gapBuscador align-items-center">
-              <!-- Filtro: -->
-              <button class="botonFiltro" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <img src="media/iconoFiltro.png" alt="" width="30" height="30"/>
-              </button>              
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <form id="formulario">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Filtro</h5>
-                        <button
-                          type="button"
-                          class="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <!-- a -->
-                        <div class="d-flex flex-wrap justify-content-center mb-3 mt-3">
-                          <div class="col-2 flex-grow-1">
-                            <p>Precio</p>
-                          </div>
-                          <div class="d-flex flex-wrap justify-content-center col-10">
-                            <div class="col-6 d-flex flex-wrap justify-content-center">
-                              <p class="mx-2 col-2">Min:</p>
-                              <input
-                                type="search"
-                                
-                                class="form-control precioFiltro"
-                                id="precioMin"
-                                name="precioMin"
-                                
-                              />
-                            </div>
-                            <div class="col-6 d-flex flex-wrap justify-content-center">
-                              <p class="mx-2 col-2">Max:</p>
-                              <input
-                                type="search"
-                                
-                                class="form-control precioFiltro"
-                                id="precioMax"
-                                name="precioMax"
-                                
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <!-- a -->
-                        <div class="d-flex flex-wrap justify-content-center mb-3 mt-3">
-                          <div class="col-4 flex-grow-1">
-                            <p>Tipo de plato</p>
-                          </div>
-                          <div class="col-8 flex-grow-1">
-                            <select
-                              class="form-select fs-5"
-                              aria-label="Default select example"
-                              id="tipoPlatoFiltro"
-                            >
-                              <option>cualquiera</option>
-                              <option>principal</option>
-                              <option>entrada</option>
-                              <option>postre</option>
-                              <option>aperitivo</option>
-                            </select>
-                          </div>
-                        </div>
-                        <!-- a -->
-                        <div class="d-flex flex-wrap justify-content-center mb-3 mt-3">
-                          <div class="col-4 flex-grow-1">
-                            <p>Apto celíaco</p>
-                          </div>
-                          <div class="col-8 flex-grow-1">
-                            <select
-                              class="form-select fs-5"
-                              aria-label="Default select example"
-                              id="aptoCeliacoFiltro"
-                            >
-                              <option>cualquiera</option>
-                              <option>no</option>
-                              <option>si</option>
-                            </select>
-                          </div>
-                        </div>
-                        <!-- a -->
-                        <div class="d-flex flex-wrap justify-content-center mb-3 mt-3">
-                          <div class="col-4 flex-grow-1">
-                            <p>Apto vegano</p>
-                          </div>
-                          <div class="col-8 flex-grow-1">
-                            <select
-                              class="form-select fs-5"
-                              aria-label="Default select example"
-                              id="aptoVeganoFiltro"
-                            >
-                              <option>cualquiera</option>
-                              <option>no</option>
-                              <option>si</option>
-                            </select>
-                          </div>
-                        </div>
-                        <!-- a -->
-                        <div class="d-flex flex-wrap justify-content-center mb-3 mt-3">
-                          <div class="col-4 flex-grow-1">
-                            <p>En falta</p>
-                          </div>
-                          <div class="col-8 flex-grow-1">
-                            <select
-                              class="form-select fs-5"
-                              aria-label="Default select example"
-                              id="enFaltaFiltro"
-                            >
-                              <option>cualquiera</option>
-                              <option>no</option>
-                              <option>si</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="submit" class="btn btn-success" id="botonFiltrar" data-bs-dismiss="modal">Filtrar</button>
-                        <button type="click" class="btn btn-danger" id="botonReiniciar">Reiniciar</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+      <!-- Navbar -->
+      <nav class="navbar navbar-dark bg-dark sticky-top px-3">
+
+    <!-- Logo -->
+  <img
+    src="media/logoKira.png"
+    id="logo"
+    alt="logo"
+    width="55px"
+    height="55px"
+  />
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <img src="media/logoKira.png" alt="logo grande">
+  </div>
+
+
+    <!-- Buscador + filtros (desktop) -->
+    <div class="d-flex align-items-center gapBuscador">
+      <input
+        type="search"
+        class="form-control"
+        placeholder="Buscar"
+        style="max-width: 260px;"
+        id="buscador"
+      >
+      <button
+        class="botonFiltro"
+        data-bs-toggle="modal"
+        data-bs-target="#modalFiltros"
+      >
+      <img src="media/iconoFiltro.png" alt="" width="30" height="30"/>
+      </button>
+    </div>
+
+    <!-- Botón menú -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#menuDerecho"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <!-- MODAL FILTROS -->
+  <div class="modal fade" id="modalFiltros" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <form>
+          <div class="modal-header">
+            <h5 class="modal-title">Filtros</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+
+            <div class="mb-3">
+              <label class="form-label">Precio</label>
+              <div class="d-flex gap-2">
+                <input type="number" class="form-control" placeholder="Mín" id="precioMin">
+                <input type="number" class="form-control" placeholder="Máx" id="precioMax">
               </div>
-              <!-- Fin filtro -->
-              <form class="form-inline ml-auto" role="search">
-                <div class="d-flex align-items-center gapBuscador">
-                    <input class="form-control mr-2" type="search" placeholder="Buscar plato" id="buscador">
-                    <button class="btn btn-pink my-2 my-sm-0" type="submit" id="buscarPlato">Buscar</button>
-                </div>
-            </form> 
             </div>
-            <button
-            class="navbar-toggler me-2"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#menuLateral"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- OFFCANVAS MAIN CONTAINER START -->
-          <section
-            class="offcanvas offcanvas-end"
-            id="menuLateral"
-            tabindex="-1"
-          >
-            <div class="offcanvas-header" data-bs-theme="dark">
-              <h5 class="offcanvas-title text-pink">Menú principal</h5>
-              <button
-                class="btn-close"
-                type="button"
-                aria-label="Close"
-                data-bs-dismiss="offcanvas"
-              ></button>
+
+            <div class="mb-3">
+              <label class="form-label">Talle</label>
+              <select class="form-select" id="talle">
+                <option>Cualquiera</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
             </div>
-            <!-- OFF CANVAS MENU LINKS  START-->
-            <div
-              class="offcanvas-body d-flex flex-column justify-content-between px-0"
-            >
-              <ul class="navbar-nav fs-5 justify-content-evenly">
-                <li class="nav-item p-3 py-md-1">
-                  <a href="" class="nav-link">Sobre Nosotros</a>
-                </li>
-                <li class="nav-item p-3 py-md-1">
-                  <a href="" class="nav-link">Contacto</a>
-                </li>
-                <li class="nav-item p-3 py-md-1" id="accesoCuenta">
-                </li>
-              </ul>
+
+            <div class="mb-3">
+              <label class="form-label">Tipo</label>
+              <select class="form-select" id="tipo">
+                <option>Cualquiera</option>
+                <option>Remera</option>
+                <option>Buzo</option>
+                <option>Campera</option>
+              </select>
             </div>
-          </section> 
-        </nav>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" id = "botonReiniciar" class="btn btn-secondary">Limpiar</button>
+            <button type="submit" class="btn btn-success">Aplicar</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- OFFCANVAS -->
+  <div class="offcanvas offcanvas-end text-bg-dark" id="menuDerecho">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title text-pink">Menú principal</h5>
+      <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+      <ul class="navbar-nav fs-5 justify-content-evenly">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Instagram</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
 
         <!-- Contenido principal -->
         <div class="pt-5" id="titulo">
@@ -226,13 +162,10 @@
         </main>
 
         <footer class="bg-dark text-white fs-5 p-3" id="footer">
-            Calle falsa 123, Buenos Aires, Argentina
-            © 2023 - Restaurante CAC
+            Kira accesories - No se recogen datos personales
         </footer>
 
-        <script src="js/getRequests.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/platosFunciones.js"></script>
         <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim. min.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

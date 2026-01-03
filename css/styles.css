@@ -56,14 +56,37 @@ main {
   height: 35px;
 }
 
+/* Logo clickeable */
+#logo {
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#logo:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Lightbox fondo */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Imagen grande */
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+
 .navLogoDiv {
   flex-wrap: wrap;
 }
-
-#logo{
-    height: 3.5rem;
-}
-
 .botonFiltro {
   background-color: transparent; /* Establece el fondo transparente */
 }
@@ -279,7 +302,8 @@ footer {
 
 @media (width<600px){
   #logo {
-    height: 47px;
+    height: 45px;
+    width: 45px;
   }
 
   #buscador {
