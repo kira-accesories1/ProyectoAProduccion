@@ -254,14 +254,19 @@ footer {
 
 .cartaproducto {
   width: 20rem;
-  margin: 1.5vw;
   font-size: 1em;
 }
 
 @media (max-width: 1119px){ 
 .cartaproducto {
   width: 15rem;
+  font-size: 0.9em;
 }
+
+.nombreproducto {
+  font-size: 1.8em;
+}
+
 }
 
 @media (width<900px){
@@ -293,11 +298,33 @@ footer {
 
 .cartaproducto {
   width: 13rem;
+  font-size: 0.8em;
 }
+
+.nombreproducto {
+  font-size: 1.6em;
+}
+
 }
 
 @media (width<528px){
 .cartaproducto {
-  width: 10rem;
+  width: 7rem;
+  font-size: 0.6em;
+}
+
+.nombreproducto {
+  font-size: 1.2em;
+}
+}
+
+@media (width<336px){
+.cartaproducto {
+  width: 5rem;
+  font-size: 0.4em;
+}
+
+.nombreproducto {
+  font-size: 0.8em;
 }
 }

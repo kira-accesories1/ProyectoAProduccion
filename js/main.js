@@ -94,7 +94,7 @@ function putproductosConStock(producto,boolPush) {
             menuCards.innerHTML = "";
         }     
         menuCards.innerHTML += `
-        <div class="producto cartaproducto ident col-lg-3 mx-4 my-4" data-producto-id = ${producto.productoId}
+        <div class="cartaproducto ident mx-4 my-4 justify-content-center" data-producto-id = ${producto.productoId}
             data-nombre=${producto.nombre}
             data-precio=${producto.precio}
             data-talle=${producto.talle}
