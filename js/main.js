@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var menu = [];
 
-    platosVacios()
+    productosVacios()
 
 
 /* ===============================
@@ -84,33 +84,33 @@ document.getElementById("botonReiniciar")
 
 
 
-function putPlatosConStock(plato,boolPush) {
-    if (!plato.enFalta) {
+function putproductosConStock(producto,boolPush) {
+    if (!producto.enFalta) {
         if(boolPush) {
-            menu.push(plato)
+            menu.push(producto)
         }
-        if(footer.classList.contains('footerPlatosVacios')) {
-            footer.classList.remove('footerPlatosVacios');
+        if(footer.classList.contains('footerproductosVacios')) {
+            footer.classList.remove('footerproductosVacios');
             menuCards.innerHTML = "";
         }     
         menuCards.innerHTML += `
-        <div class="producto cartaPlato ident col-lg-3 mx-4 my-4" data-plato-id = ${plato.platoId}
-            data-nombre=${plato.nombre}
-            data-precio=${plato.precio}
-            data-talle=${plato.talle}
-            data-tipo=${plato.tipoPlato}
+        <div class="producto cartaproducto ident col-lg-3 mx-4 my-4" data-producto-id = ${producto.productoId}
+            data-nombre=${producto.nombre}
+            data-precio=${producto.precio}
+            data-talle=${producto.talle}
+            data-tipo=${producto.tipoproducto}
         >
         <div class="card animate-hover-card">
-            <img src=${plato.imagen} class="card-img-top" alt="foto plato" id="fotoplato">
+            <img src=${producto.imagen} class="card-img-top" alt="foto producto" id="fotoproducto">
             <div class="d-flex px-2">
             <div class="card-body py-1 col-8">
-                <p class="text-center nombrePlato mb-1">${plato.nombre}</p>
-                <p class="my-1">${plato.descripcion}</p>
-                <p class="my-1">Tipo: ${plato.tipoPlato}</p>
+                <p class="text-center nombreproducto mb-1">${producto.nombre}</p>
+                <p class="my-1">${producto.descripcion}</p>
+                <p class="my-1">Tipo: ${producto.tipoproducto}</p>
             </div>
             </div>
             <p class="text-center fs-5 my-1">
-                $${plato.precio}
+                $${producto.precio}
             </p>
         </div>
         </div> 
@@ -119,22 +119,22 @@ function putPlatosConStock(plato,boolPush) {
     }
 }
 
-function platosVacios(){
+function productosVacios(){
 menuCards.innerHTML += `
-<p class="text-center plato text-white fuenteLobster fs-2">No hay platos.</p>
+<p class="text-center text-white sinproductos fs-2">No hay productos.</p>
 `;
-footer.classList.add('footerPlatosVacios');
+footer.classList.add('footerproductosVacios');
 console.log(footer)
 
 }
 
 
-plato1={
-   platoId: "plato1",
+producto1={
+   productoId: "producto1",
    descripcion: "asdasdada",
    talle: "S",
-   nombre: "plato1",
-   tipoPlato: "Remera",
+   nombre: "producto1",
+   tipoproducto: "Remera",
    precio: 8500,
    enFalta: false,
    imagen: "media/ravioles.jpg",
@@ -142,15 +142,15 @@ plato1={
    aptoCeliaco: true
  }
 
- putPlatosConStock(plato1,true)
+ putproductosConStock(producto1,true)
 
 
-plato2={
-   platoId: "plato2",
+producto2={
+   productoId: "producto2",
    descripcion: "asdasdada",
    talle: "M",
-   nombre: "plato2",
-   tipoPlato: "Buzo",
+   nombre: "producto2",
+   tipoproducto: "Buzo",
    precio: 8500,
    enFalta: false,
    imagen: "media/ravioles.jpg",
@@ -158,14 +158,14 @@ plato2={
    aptoCeliaco: false
  }
 
- putPlatosConStock(plato2,true)
+ putproductosConStock(producto2,true)
 
- plato3={
-    platoId: "plato3",
+ producto3={
+    productoId: "producto3",
     descripcion: "asdasdada",
     talle: "L",
-    nombre: "plato3",
-    tipoPlato: "Campera",
+    nombre: "producto3",
+    tipoproducto: "Campera",
     precio: 8500,
     enFalta: false,
     imagen: "media/ravioles.jpg",
@@ -173,15 +173,15 @@ plato2={
     aptoCeliaco: false
   }
  
-  putPlatosConStock(plato3,true)
+  putproductosConStock(producto3,true)
 
   
-  plato4={
-    platoId: "plato4",
+  producto4={
+    productoId: "producto4",
     descripcion: "asdasdada",
     talle: "XL",
-    nombre: "plato4",
-    tipoPlato: "Campera",
+    nombre: "producto4",
+    tipoproducto: "Campera",
     precio: 8500,
     enFalta: false,
     imagen: "media/ravioles.jpg",
@@ -189,15 +189,15 @@ plato2={
     aptoCeliaco: false
   }
  
-  putPlatosConStock(plato4,true)
+  putproductosConStock(producto4,true)
 
   
-  plato5={
-    platoId: "plato5",
+  producto5={
+    productoId: "producto5",
     descripcion: "asdasdada",
     talle: "S",
-    nombre: "plato5",
-    tipoPlato: "Campera",
+    nombre: "producto5",
+    tipoproducto: "Campera",
     precio: 8500,
     enFalta: false,
     imagen: "media/ravioles.jpg",
@@ -205,15 +205,15 @@ plato2={
     aptoCeliaco: false
   }
  
-  putPlatosConStock(plato5,true)
+  putproductosConStock(producto5,true)
 
   
-  plato6={
-    platoId: "plato6",
+  producto6={
+    productoId: "producto6",
     descripcion: "asdasdada",
     talle: "S",
-    nombre: "plato6",
-    tipoPlato: "Campera",
+    nombre: "producto6",
+    tipoproducto: "Campera",
     precio: 8500,
     enFalta: false,
     imagen: "media/ravioles.jpg",
@@ -221,7 +221,7 @@ plato2={
     aptoCeliaco: false
   }
  
-  putPlatosConStock(plato6,true)
+  putproductosConStock(producto6,true)
  
 
 

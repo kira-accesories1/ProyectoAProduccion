@@ -12,10 +12,10 @@ main {
   flex: 1;
 }
 
-.fuenteLobster, nav *, footer {
+.fuente, nav *, footer {
   margin: 0;
   padding: 0;
-  font-family: 'Lobster', sans-serif;
+  font-family: "Proxima Nova", Arial, sans-serif;
 }
 
 .background {
@@ -149,12 +149,19 @@ main {
         margin-left: auto;
 }
 
-.menuTitulo {
-  text-shadow:
-  -2px -2px 0 #000000,
-  2px -2px 0 #000000,
-  -2px 2px 0 #000000,
-  2px 2px 0 #000000;
+.resaltado {
+  text-shadow: 0 1px 2px black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    text-shadow:
+    /* contorno / legibilidad */    
+    0 0 1px rgba(0, 0, 0, 1),
+    0 0 3px rgba(0, 0, 0, 1),
+    0 0 6px rgba(0, 0, 0, 1),
+    0 0 12px rgba(0, 0, 0, 1),
+
+    /* blur rosa abajo a la derecha */
+    20px 20px 4px #e47fae;
 }
 
 .card {
@@ -175,7 +182,7 @@ main {
   flex-wrap: wrap;
 }
 
-.nombrePlato {
+.nombreproducto {
   font-size: 20px;
 }
 
@@ -211,7 +218,16 @@ main {
   color: #e47fae;
 }
 
-.footerPlatosVacios {
+.sinproductos {
+  text-shadow: 0 1px 2px black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    text-shadow:
+    /* contorno / legibilidad */
+    0 0 2px rgba(0, 0, 0, 1);
+}
+
+.footerproductosVacios {
   background-color: black;
   width: 100%;
   height: 50px;
@@ -238,7 +254,7 @@ footer {
 }
 
 @media (max-width: 992px){ 
-.cartaPlato {
+.cartaproducto {
   width: 244px;
   height: 410px;
 }
@@ -249,54 +265,58 @@ footer {
     width: 160px;
   }
 
-  .cartaPlato {
+  .cartaproducto {
   width: 200px;
   height: 370px;
 }
 
-#fotoplato {
+#fotoproducto {
     width: 200px;
   height: 220px;
 }
 }
 
 @media (max-width: 790px){ 
-.cartaPlato {
+.cartaproducto {
   width: 180px;
   height: 330px;
 }
 
-#fotoplato {
+#fotoproducto {
     width: 180px;
   height: 200px;
 }
 }
 
 @media (max-width: 732px){ 
-.cartaPlato {
+.cartaproducto {
   width: 150px;
   height: 250px;
 }
 
-#fotoplato {
+#fotoproducto {
     width: 150px;
   height: 140px;
 }
 }
 
 @media (max-width: 650px){ 
-.cartaPlato {
+.cartaproducto {
   width: 130px;
   height: 200px;
 }
 
-#fotoplato {
+#fotoproducto {
     width: 130px;
   height: 110px;
 }
 
-.cartaPlato {
+.cartaproducto {
   font-size: 10px;
+}
+
+#menuDerecho {
+  width: 300px;
 }
 }
 
@@ -310,13 +330,17 @@ footer {
     width: 120px;
   }
 
-  .cartaPlato {
+  .cartaproducto {
   width: 110px;
   height: 200px;
 }
 
-#fotoplato {
+#fotoproducto {
     width: 110px;
   height: 80px;
+}
+
+#menuDerecho {
+  width: 250px;
 }
 }
