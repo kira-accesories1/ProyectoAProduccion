@@ -48,6 +48,7 @@
 
     <!-- Buscador + filtros (desktop) -->
     <div class="d-flex align-items-center gapBuscador">
+      <div class="buscador-wrapper">
       <input
         type="search"
         class="form-control"
@@ -55,6 +56,10 @@
         style="max-width: 260px;"
         id="buscador"
       >
+      <button id="btnBuscar" aria-label="Buscar">
+        <img class="lupa" src="media/lupita.svg" alt="lupa">
+      </button>
+      </div>
       <button
         class="botonFiltro"
         data-bs-toggle="modal"
@@ -97,13 +102,11 @@
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Talle</label>
-              <select class="form-select" id="talle">
+              <label class="form-label">Stock</label>
+              <select class="form-select" id="stock">
                 <option>Cualquiera</option>
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
+                <option>Con</option>
+                <option>Sin</option>
               </select>
             </div>
 
@@ -111,11 +114,22 @@
               <label class="form-label">Tipo</label>
               <select class="form-select" id="tipo">
                 <option>Cualquiera</option>
-                <option>Remera</option>
-                <option>Buzo</option>
-                <option>Campera</option>
+                <option>Aros</option>
+                <option>Collar</option>
+                <option>Pulsera</option>
               </select>
             </div>
+
+            <!-- Orden por precio -->
+            <div class="mb-3">
+              <label class="form-label">Ordenar por</label>
+              <select class="form-select" id="ordenPrecio">
+                <option>Sin ordenar</option>
+                <option>Precio asc</option>
+                <option>Precio desc</option>
+              </select>
+            </div>
+
 
           </div>
 
@@ -139,17 +153,76 @@
     <div class="offcanvas-body">
       <ul class="navbar-nav fs-5 justify-content-evenly">
         <li class="nav-item">
-          <a class="nav-link" href="#">Sobre nosotros</a>
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalSobreNosotros">Sobre nosotros</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Instagram</a>
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalEntregas">Entregas</a>
         </li>
       </ul>
     </div>
   </div>
+
+  <!-- Modal sobre nosotros -->
+
+  <div class="modal fade" id="modalSobreNosotros" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content bg-dark text-white m-4">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Sobre nosotros</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <p>
+          Detrás de Kira estoy yo, Anto, una chica de Cañuelas que se fue a La Plata a estudiar Medicina, y este emprendimiento nació como una forma de acompañar ese sueño y ayudarme a costear mis estudios.
+        </p>
+
+        <p>
+          Kira no es solo el nombre de mí emprendimiento: es el nombre de mi perrita 🐶🤍, quien me inspiró a animarme a emprender con amor, dedicación y constancia.
+        </p>
+
+        <p>
+          Creo y selecciono accesorios pensados para el día a día, duraderos y con ese detalle especial que los hace únicos.
+        </p>
+
+        <p>
+          Trabajo de manera independiente, cuidando cada pedido y ofreciendo un trato cercano, porque detrás de cada compra hay una persona que confía en mí.
+        </p>
+
+        <p>
+          Mi objetivo es que encuentres en Kira un accesorio que te represente, te acompañe y tenga un significado especial 💫
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <!-- Modal Envíos -->
+
+  <div class="modal fade" id="modalEntregas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content bg-dark text-white m-4">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Entregas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <p>
+          Se realizan entregas en Cañuelas y en La Plata.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
         <!-- Contenido principal -->
@@ -158,11 +231,14 @@
         </div>
 
         <!-- Cards -->
-        <main class="d-flex justify-content-center mb-3" id="menu">                     <!-- ACA VAN LAS TARJETAS -->
+        <main class="mb-3" id="menu">
+          <div class="justify-content-center contenedor row" id="contenedorMenu">                     <!-- ACA VAN LAS TARJETAS -->
+
+          </div>
         </main>
 
         <footer class="bg-dark text-white fs-5 p-3" id="footer">
-            Kira accesories - No se recogen datos personales
+            Kira accesories - No se recogen datos personales - Made by Jeremías Mannino
         </footer>
 
         <script src="js/main.js"></script>

@@ -43,7 +43,7 @@ main {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  z-index: 9999;
+  z-index: 9998;
   transition: transform 0.2s ease;
 }
 
@@ -100,15 +100,41 @@ main {
     transform: scale(1.03);
 } 
 
-.ColorCartaEnFalta::before {
-    content: '';
-    position: absolute;
+.claseEnFalta {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
+.imgEnFalta {
+  opacity: 0.4;
+}
+
+.letreroEnFalta {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    margin-bottom: 0;
+    text-shadow:
+    /* contorno / legibilidad */    
+    0 0 1px rgba(0, 0, 0, 1),
+    0 0 3px rgba(0, 0, 0, 1),
+    0 0 6px rgba(0, 0, 0, 1),
+    0 0 12px rgba(0, 0, 0, 1)
+}
+
+.img-wrapper {
+  position: relative; /* ← CLAVE */
+}
+
+
+.letreroDisponible {
+  display: none;
+}
 .gapNav{
     column-gap: 30px;
 }
@@ -117,16 +143,60 @@ main {
     column-gap: 10px;
 }
 
+.lupa {
+  height: 25px;
+  width: 25px;
+}
+
+.buscador-wrapper {
+  position: relative;
+}
+
+.buscador-wrapper input {
+  padding-right: 40px; /* espacio para la lupa */
+}
+
+.buscador-wrapper button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #e47fae; /* rosa */
+}
+
+.buscador-wrapper button:hover {
+  opacity: 0.7;
+}
+
+/* Quitar la X del input search (Chrome, Edge, Safari) */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+
+
 .offcanvas {
     background-color: #1e293b;
   }
-  .navbar-toggler {
+
+.navbar-toggler {
     border: none;
   }
-  .navbar-toggler:focus {
+  
+.navbar-toggler:focus {
     outline: none;
     box-shadow: none;
   }
+
+.nav-link:hover {
+color: #e47fae ;
+}
 
   /* .imagenSuperpuesta {
     position: absolute;
@@ -164,11 +234,19 @@ main {
     20px 20px 4px #e47fae;
 }
 
-.fotoprod {
-  object-fit: cover;
+.contenedor {
+  box-sizing: border-box;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-.card {
+.fotoprod {
+  width: 100%;
+  height: auto;
+}
+
+.cartaadentro {
   box-shadow: 0 0 20px rgba(0, 0, 0, 1);
   border: none;
 }
@@ -181,25 +259,10 @@ main {
   flex-wrap: wrap;
 }
 
-.nombreproducto {
-  font-size: 2em;
+.nombreyprecio {
+  font-size: 1.1rem;
 }
 
-.enFaltaEtiqueta {
-  width: 80px;
-  top: 5px; /* Ajusta la distancia desde la parte superior */
-  left: -15px; /* Ajusta la distancia desde la derecha */
-  transform: rotate(-45deg); /* Gira el texto diagonalmente */
-  background-color: red;
-  color: white;
-  padding: 5px 10px;
-  z-index: 1; /* Asegura que esté encima del contenido de la carta */
-  border-radius: 2px;
-}
-
-.btn-sin-stock {
-  z-index: 2;
-}
 
 .btn-pink {
   color: #e47fae;
@@ -253,18 +316,21 @@ footer {
 }
 
 .cartaproducto {
-  width: 20rem;
-  font-size: 1em;
+  margin: 1%;
+  width: 23%;
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 1rem;
 }
 
 @media (max-width: 1119px){ 
 .cartaproducto {
-  width: 15rem;
-  font-size: 0.9em;
+  width: 31%;
+  font-size: 0.9rem;
 }
 
-.nombreproducto {
-  font-size: 1.8em;
+.nombreyprecio {
+  font-size: 0.99rem;
 }
 
 }
@@ -273,6 +339,17 @@ footer {
   #buscador {
     width: 160px;
   }
+
+.lupa {
+    height: 22px;
+    width: 22px;
+  }
+
+  .cartaproducto {
+  margin: 1.5%;
+  width: 47%;
+}
+
 }
 
 @media (max-width: 650px){ 
@@ -292,39 +369,33 @@ footer {
     width: 120px;
   }
 
+.lupa {
+    height: 18px;
+    width: 18px;
+  }
+
 .menuDerecha {
   width: 250px !important;
 }
 
 .cartaproducto {
-  width: 13rem;
-  font-size: 0.8em;
+  font-size: 0.8rem;
+  margin: 2%;
+  width: 46%;
 }
 
-.nombreproducto {
-  font-size: 1.6em;
+.nombreyprecio {
+  font-size: 0.88rem;
 }
 
-}
-
-@media (width<528px){
-.cartaproducto {
-  width: 7rem;
-  font-size: 0.6em;
-}
-
-.nombreproducto {
-  font-size: 1.2em;
-}
 }
 
 @media (width<336px){
 .cartaproducto {
-  width: 5rem;
-  font-size: 0.4em;
+  font-size: 0.5rem;
 }
 
-.nombreproducto {
-  font-size: 0.8em;
+.nombreyprecio {
+  font-size: 0.55rem;
 }
 }
