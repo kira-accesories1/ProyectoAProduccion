@@ -110,16 +110,6 @@
               </select>
             </div>
 
-            <div class="mb-3">
-              <label class="form-label">Tipo</label>
-              <select class="form-select" id="tipo">
-                <option>Cualquiera</option>
-                <option>Aros</option>
-                <option>Collar</option>
-                <option>Pulsera</option>
-              </select>
-            </div>
-
             <!-- Orden por precio -->
             <div class="mb-3">
               <label class="form-label">Ordenar por</label>
@@ -152,14 +142,48 @@
 
     <div class="offcanvas-body">
       <ul class="navbar-nav fs-5 justify-content-evenly">
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalSobreNosotros">Sobre nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
-        </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          Inicio
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#menuProductos">
+          Productos ▾
+        </a>
+      </li>
+
+      <!-- MENÚ DESPLEGABLE QUE EMPUJA -->
+      <div class="collapse bg-dark" id="menuProductos">
+        <ul class="nav flex-column text-start py-2">
+          <li class="nav-item">
+            <a class="nav-link" href="?tipo=Pulsera">Pulsera</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?tipo=Aros">Aros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?tipo=Collar">Collar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?tipo=Collar">Tobillera</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?tipo=Collar">Anillo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?tipo=Collar">Strap phone</a>
+          </li>
+        </ul>
+      </div>
+
         <li class="nav-item">
           <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalEntregas">Entregas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalSobreNosotros">Sobre nosotros</a>
         </li>
       </ul>
     </div>
