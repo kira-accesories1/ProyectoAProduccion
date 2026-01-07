@@ -434,7 +434,7 @@ producto3={
 
     producto19={
    productoId: "producto19",
-   nombre: "Aros abrigadores de acero quirúrgico",
+   nombre: "Aros abridores de acero quirúrgico",
    tipoproducto: "Aros",
    precio: 7500,
    enFalta: false,

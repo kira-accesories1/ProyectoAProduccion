@@ -1,11 +1,15 @@
 html, body {
   height: 100%;
   margin: 0;
+  max-width: 100%;
+ overflow-x: hidden;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
 }
 
 main {
@@ -247,6 +251,7 @@ color: white ;
 .fotoprod {
   width: 100%;
   height: auto;
+  transition: opacity 0.3s ease;
 }
 
 .cartaadentro {
@@ -302,7 +307,7 @@ color: white ;
   align-items: center;     /* centra vertical */
 }
 
-footer {
+#footer {
   background-color: black;
   width: 100%;
   height: 50px;
@@ -310,6 +315,11 @@ footer {
   display: flex;
   justify-content: center; /* centra horizontal */
   align-items: center;     /* centra vertical */
+  font-size: 1.25rem;
+}
+
+#textofooter {
+  margin: 0;
 }
 
 .fondoForm{
@@ -336,6 +346,11 @@ footer {
   font-size: 0.99rem;
 }
 
+#footer {
+  font-size: 1rem;
+  height: 40px;
+}
+
 }
 
 @media (width<900px){
@@ -351,6 +366,11 @@ footer {
   .cartaproducto {
   margin: 1.5%;
   width: 47%;
+}
+
+#footer {
+  font-size: 0.75rem;
+  height: 30px;
 }
 
 }
@@ -389,6 +409,11 @@ footer {
 
 .nombreyprecio {
   font-size: 0.88rem;
+}
+
+#footer {
+  font-size: 0.5rem;
+  height: 20px;
 }
 
 }
