@@ -130,8 +130,6 @@ function putProductos(producto) {
         <div class="card-body py-1 col-8">
             <p class="text-center nombreyprecio mb-1">${producto.nombre}</p>
             <p class="my-1">Tipo: ${producto.tipoprod}</p>
-            <p class="my-1 ${claseSinColores}">Colores disponibles: ${producto.coloresConStock}</p>
-            <p class="my-1 ${claseSinTalle}">Talles: ${producto.talle}</p>
         </div>
         </div>
         <p class="text-center nombreyprecio my-1">
