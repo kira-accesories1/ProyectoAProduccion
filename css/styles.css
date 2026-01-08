@@ -227,7 +227,6 @@ color: white ;
 }
 
 .resaltado {
-  text-shadow: 0 1px 2px black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
     text-shadow:
@@ -425,5 +424,210 @@ color: white ;
 
 .nombreyprecio {
   font-size: 0.55rem;
+}
+}
+
+
+
+
+
+
+/*PAGINA DE PRODUCTOS: */
+
+#titulorecomendados {
+  margin-top: 3rem;
+  font-size: 4vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    text-shadow:
+    /* contorno / legibilidad */    
+    0 0 1px rgba(0, 0, 0, 1),
+    0 0 2px rgba(0, 0, 0, 1);
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: black;
+}
+
+#contenedorimgrecomendadas {
+  height: 12vh;
+  margin-left: 15%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+  max-height: 100%;
+  gap: 2%;
+}
+
+#contenedorprodrecomendado {
+  display: flex;
+  flex-direction: row;
+  width: 32%;
+  box-sizing: border-box;
+}
+
+.recomendada {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+#imgprodrecomendada {
+  height: auto;
+  width: 30%;
+  box-sizing: border-box;
+  padding-right: 1rem;
+}
+
+#cartapagina {
+  margin-left: 15%;
+  margin-right: 10%;
+  height: 55vh;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#contenedorinfoprodpagina {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  justify-content: space-between;
+}
+
+#contenedorimgprodpagina{
+  box-sizing: border-box;
+  height:100%;
+  max-height: 100%;
+  width: 50%;
+  padding: 0;
+}
+
+.imgprodpagina {
+  height: 100%;
+}
+
+.resaltadopagina {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.botonpagina{
+  width: 70%;
+}
+
+
+.textosinfopagina{
+  width: 90%;
+  padding-top: 0rem;
+  padding-bottom: 3rem;
+}
+
+.textopaginapago{
+  display: block;
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+}
+
+
+@media (width<950px) {
+  #cartapagina {
+    height: 44vh;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #contenedorimgrecomendadas {
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+#imgprodrecomendada {
+  height: auto;
+  width: 40%;
+  box-sizing: border-box;
+  padding-right: 0;
+}
+
+  .textosinfopagina{
+  font-size: 14px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#contenedorinfoprodpagina {
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+}
+}
+
+
+@media (width<700px) {
+  #cartapagina {
+    height: 33vh;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  #contenedorimgrecomendadas {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+  #contenedorinfoprodpagina {
+  padding-top: 0;
+  padding-bottom: 5px;
+}
+
+  .textosinfopagina{
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 12px;
+}
+
+#titulocartaprodpagina {
+  font-size: 19px;
+}
+
+#textorecomendada {
+  font-size: 13px;
+}
+}
+
+@media (width<550px) {
+  #cartapagina {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+
+#contenedorimgrecomendadas {
+  height: 20vw;
+  min-height: 6rem;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+#titulorecomendados {
+  font-size: 30px;
+}
+
+#textorecomendada {
+  margin-bottom: 3vw;
+  font-size: 11px;
+}
+
+#imgprodrecomendada {
+  width: auto;
 }
 }

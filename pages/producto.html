@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Kira accesories - Producto</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    </head>
+    <body class="background">
+
+    <!-- Navbar -->
+        <nav class="navbar navbar-dark bg-dark sticky-top px-3">
+
+            <!-- Logo -->
+        <img
+            src="../media/logoKira.png"
+            id="logo"
+            alt="logo"
+            width="60px"
+            height="55px"
+        />
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <img src="../media/logoKira.png" alt="logo grande">
+        </div>
+
+
+
+            <!-- Botón menú -->
+            <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#menuDerecho"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+          <!-- OFFCANVAS -->
+        <div class="offcanvas offcanvas-end text-bg-dark menuDerecha" id="menuDerecho">
+            <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-pink">Menú principal</h5>
+            <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+
+            <div class="offcanvas-body">
+            <ul class="navbar-nav fs-5 justify-content-evenly">
+
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">
+                Inicio
+                </a>
+            </li>
+
+                   <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalEntregas">Entregas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalSobreNosotros">Sobre nosotros</a>
+        </li>
+         </ul>
+        </div>
+        </div>
+
+        <!-- Modal sobre nosotros -->
+
+            <div class="modal fade" id="modalSobreNosotros" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                <div class="modal-content bg-dark text-white m-4">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Sobre nosotros</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>
+                    Detrás de Kira estoy yo, Anto, una chica de Cañuelas que se fue a La Plata a estudiar Medicina, y este emprendimiento nació como una forma de acompañar ese sueño y ayudarme a costear mis estudios.
+                    </p>
+
+                    <p>
+                    Kira no es solo el nombre de mí emprendimiento: es el nombre de mi perrita 🐶🤍, quien me inspiró a animarme a emprender con amor, dedicación y constancia.
+                    </p>
+
+                    <p>
+                    Creo y selecciono accesorios pensados para el día a día, duraderos y con ese detalle especial que los hace únicos.
+                    </p>
+
+                    <p>
+                    Trabajo de manera independiente, cuidando cada pedido y ofreciendo un trato cercano, porque detrás de cada compra hay una persona que confía en mí.
+                    </p>
+
+                    <p>
+                    Mi objetivo es que encuentres en Kira un accesorio que te represente, te acompañe y tenga un significado especial 💫
+                    </p>
+                </div>
+
+                </div>
+            </div>
+            </div>
+
+
+            <!-- Modal Envíos -->
+
+            <div class="modal fade" id="modalEntregas" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                <div class="modal-content bg-dark text-white m-4">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Entregas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>
+                    Se realizan entregas en Cañuelas y en La Plata.
+                    </p>
+                </div>
+
+                </div>
+            </div>
+            </div>
+
+
+
+        <div class="card" id="cartapagina">
+            <div id="contenedorimgprodpagina">
+            </div>
+            <div class="resaltadopagina align-items-center" id="contenedorinfoprodpagina">
+            </div>
+        </div>
+
+        <p class="text-center text-black" id="titulorecomendados">
+            Productos recomendados
+        </p>
+        <div class="my-1" id="contenedorimgrecomendadas">
+        </div>
+
+        
+
+
+
+        <script type="module" src="../js/producto.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim. min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    </body>

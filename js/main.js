@@ -116,12 +116,8 @@ function putProductos(producto) {
     }
     menuCards.innerHTML += `
     <div class="cartaproducto my-3"
-        data-nombre=${producto.nombre}
-        data-precio=${producto.precio}
-        data-tipo=${producto.tipoprod}
-        data-enfalta=${producto.enFalta}
-        data-orden=${producto.orden}
-        data-mostrar="true"
+        data-id=${producto.id}
+        style="cursor:pointer"
     >
     <div class="card cartaadentro ${claseEnFalta} animate-hover-card">
         <div class="img-wrapper">
@@ -190,6 +186,16 @@ document.getElementById("botonReiniciar")
   ?.addEventListener("click", () => {
     formFiltros.reset();
   });
+
+
+menuCards.addEventListener("click", e => {
+  const carta = e.target.closest(".cartaproducto");
+  if (!carta) return;
+
+  const id = carta.dataset.id;
+  window.location.href = `pages/producto.html?id=${id}`;
+});
+
 
 
 
