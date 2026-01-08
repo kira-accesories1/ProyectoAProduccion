@@ -527,13 +527,6 @@ color: white ;
   padding-bottom: 3rem;
 }
 
-.textopaginapago{
-  display: block;
-  text-decoration: none;
-  background: 0 0;
-  border: 0;
-}
-
 
 @media (width<950px) {
   #cartapagina {

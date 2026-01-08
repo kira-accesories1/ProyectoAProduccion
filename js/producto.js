@@ -33,18 +33,27 @@ async function cargarProducto() {
 
   `;
 
+  let claseSinColores = "";
+  let claseSinTalle = "";
+  let claseSinDescripcion ="";
+    if (producto.descripcion==null) {
+      claseSinDescripcion="ocultarElem"
+    }
+    if (producto.coloresConStock==null) {
+      claseSinColores="ocultarElem"
+    }
+    if (producto.talle==null) {
+      claseSinTalle="ocultarElem"
+    }
   contenedorinfo.innerHTML = `
     <h1 class="text-center" id="titulocartaprodpagina">${producto.nombre}</h1>
     <div class="textosinfopagina align-items-start">
-        <p class="text-start">Precio: $${producto.precio}</p>
         <p class="text-start">Tipo: ${producto.tipoprod}</p>
-        <p class="text-start">Código: ${producto.id}</p>
         ${producto.enFalta ? "<p class='text-start'>Sin stock</p>":"<p class='text-start'>Disponible</p>"}
-        <p class="text-start">
-        <a class="textopaginapago text-black" href="#" data-bs-toggle="collapse" data-bs-target="#mediosdepago">
-          Medios de pago ▾
-        </a>
-        </p>
+        <p class="text-start ${claseSinColores}">Colores Disponibles: ${producto.coloresConStock}</p>
+        <p class="text-start ${claseSinTalle}">Talles Disponibles: ${producto.talle}</p>
+        <p class="text-start ${claseSinDescripcion}">Descripción: ${producto.descripcion}</p>
+        <p class="text-start">Precio: $${producto.precio}</p>
     </div>
     <a href="https://wa.me/5492226626230?text=Hola,%20quisiera%20comprar%20el%20siguiente%20producto:%20https://kira-accesories.pages.dev/pages/producto.html?id=${id}" class="btn btn-success botonpagina">
       Comprar
