@@ -197,21 +197,6 @@ menuCards.addEventListener("click", e => {
 
 
 
-// imagen modal
-  const logo = document.getElementById("logo");
-  const lightbox = document.getElementById("lightbox");
-
-  logo.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-  });
-
-  lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
-  });
-
-
-
-
 
 
   /* ===============================

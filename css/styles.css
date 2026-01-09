@@ -9,7 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 main {
@@ -69,22 +69,6 @@ main {
 #logo:hover {
   transform: scale(1.05);
   opacity: 0.9;
-}
-
-/* Lightbox fondo */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-/* Imagen grande */
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
 }
 
 
@@ -267,7 +251,7 @@ color: white ;
 }
 
 .nombreyprecio {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 
@@ -332,22 +316,21 @@ color: white ;
   width: 23%;
   box-sizing: border-box;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 @media (max-width: 1119px){ 
 .cartaproducto {
   width: 31%;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .nombreyprecio {
-  font-size: 0.99rem;
+  font-size: 1.25rem;
 }
 
 #footer {
-  font-size: 1rem;
-  height: 40px;
+  height: 45px;
 }
 
 }
@@ -368,8 +351,8 @@ color: white ;
 }
 
 #footer {
-  font-size: 0.75rem;
-  height: 30px;
+  font-size: 1rem;
+  height: 40px;
 }
 
 }
@@ -378,6 +361,11 @@ color: white ;
 
 .menuDerecha {
   width: 300px !important;
+}
+
+#footer {
+  font-size: 0.75rem;
+  height: 30px;
 }
 }
 
@@ -407,23 +395,12 @@ color: white ;
 }
 
 .nombreyprecio {
-  font-size: 0.88rem;
+  font-size: 1rem;
 }
 
 #footer {
-  font-size: 0.5rem;
-  height: 20px;
-}
-
-}
-
-@media (width<336px){
-.cartaproducto {
-  font-size: 0.5rem;
-}
-
-.nombreyprecio {
-  font-size: 0.55rem;
+  font-size: 0.6rem;
+  height: 30px;
 }
 }
 
@@ -457,7 +434,7 @@ color: white ;
   gap: 2%;
 }
 
-#contenedorprodrecomendado {
+.contenedorprodrecomendado {
   display: flex;
   flex-direction: row;
   width: 32%;
@@ -470,14 +447,21 @@ color: white ;
   max-height: 100%;
   width: 70%;
   box-sizing: border-box;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 
-#imgprodrecomendada {
+.imgprodrecomendada {
   height: auto;
   width: 30%;
   box-sizing: border-box;
   padding-right: 1rem;
 }
+
+.textorecomendada {
+  margin-bottom: 0;
+}
+
 
 #cartapagina {
   margin-left: 15%;
@@ -525,6 +509,7 @@ color: white ;
   width: 90%;
   padding-top: 0rem;
   padding-bottom: 3rem;
+  font-size: 20px;
 }
 
 
@@ -542,7 +527,7 @@ color: white ;
   margin-right: 7%;
 }
 
-#imgprodrecomendada {
+.imgprodrecomendada {
   height: auto;
   width: 40%;
   box-sizing: border-box;
@@ -550,7 +535,7 @@ color: white ;
 }
 
   .textosinfopagina{
-  font-size: 14px;
+  font-size: 16px;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -564,7 +549,6 @@ color: white ;
 
 @media (width<700px) {
   #cartapagina {
-    height: 33vh;
     margin-left: 3%;
     margin-right: 3%;
     margin-top: 4rem;
@@ -584,15 +568,23 @@ color: white ;
   .textosinfopagina{
   padding-top: 0;
   padding-bottom: 0;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 #titulocartaprodpagina {
-  font-size: 19px;
+  font-size: 25px;
 }
 
-#textorecomendada {
+.textorecomendada {
   font-size: 13px;
+}
+
+#contenedorimgprodpagina{
+  width: auto;
+}
+
+#contenedorinfoprodpagina {
+  width: auto;
 }
 }
 
@@ -615,12 +607,16 @@ color: white ;
   font-size: 30px;
 }
 
-#textorecomendada {
-  margin-bottom: 3vw;
+.textorecomendada {
   font-size: 11px;
 }
 
-#imgprodrecomendada {
+.imgprodrecomendada {
   width: auto;
+}
+
+.recomendada {
+  padding-right: 0.2rem;
+  padding-left: 0.2rem;
 }
 }

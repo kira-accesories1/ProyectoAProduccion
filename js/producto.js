@@ -48,14 +48,14 @@ async function cargarProducto() {
   contenedorinfo.innerHTML = `
     <h1 class="text-center" id="titulocartaprodpagina">${producto.nombre}</h1>
     <div class="textosinfopagina align-items-start">
+        <p class="text-start ${claseSinDescripcion}">Descripción: ${producto.descripcion}</p>
         <p class="text-start">Tipo: ${producto.tipoprod}</p>
         ${producto.enFalta ? "<p class='text-start'>Sin stock</p>":"<p class='text-start'>Disponible</p>"}
-        <p class="text-start ${claseSinColores}">Colores Disponibles: ${producto.coloresConStock}</p>
-        <p class="text-start ${claseSinTalle}">Talles Disponibles: ${producto.talle}</p>
-        <p class="text-start ${claseSinDescripcion}">Descripción: ${producto.descripcion}</p>
+        <p class="text-start ${claseSinColores}">Colores: ${producto.coloresConStock}</p>
+        <p class="text-start ${claseSinTalle}">Talles: ${producto.talle}</p>
         <p class="text-start">Precio: $${producto.precio}</p>
     </div>
-    <a href="https://wa.me/5492226626230?text=Hola,%20quisiera%20comprar%20el%20siguiente%20producto:%20https://kira-accesories.pages.dev/pages/producto.html?id=${id}" class="btn btn-success botonpagina">
+    <a target="_blank" href="https://wa.me/5492226626230?text=Hola,%20quisiera%20comprar%20el%20siguiente%20producto:%20https://kira-accesories.pages.dev/pages/producto.html?id=${id}" class="btn btn-success botonpagina">
       Comprar
     </a>
 
@@ -66,7 +66,7 @@ async function cargarRecomendados(idProducto) {
   const { data:recomendados, error:error2 } = await supabase
     .rpc("get_recomendados", {
       producto_id: idProducto,
-      limite: 6
+      limite: 3
     });
 
   if (error2) {
@@ -83,15 +83,15 @@ function renderizarRecomendados(productos) {
 
   productos.forEach(p => {
     cont.innerHTML += `
-      <div class="card animate-hover-card" id="contenedorprodrecomendado"
+      <div class="card animate-hover-card contenedorprodrecomendado"
         data-id=${p.id}
         style="cursor:pointer"
         >
-        <img src="${p.imagen_path}" id="imgprodrecomendada">
-        <div class="recomendada px-2">
-            <p class="text-center" id="textorecomendada">${p.nombre}</p>
-            ${p.enFalta ? "<p class='text-center' id='textorecomendada'>Sin stock</p>":"<p class='text-center' id='textorecomendada'>Disponible</p>"}
-            <p class="text-center" id="textorecomendada">$${p.precio}</p>
+        <img src="${p.imagen_path}" class="imgprodrecomendada">
+        <div class="recomendada justify-content-between">
+            <p class="text-center textorecomendada">${p.nombre}</p>
+            ${p.enFalta ? "<p class='text-center textorecomendada'>Sin stock</p>":"<p class='text-center textorecomendada'>Disponible</p>"}
+            <p class="text-center textorecomendada">$${p.precio}</p>
         </div>
       </div>
     `;
@@ -102,27 +102,13 @@ function renderizarRecomendados(productos) {
 // eventos
 const recomendaciones = document.getElementById("contenedorimgrecomendadas");
 recomendaciones.addEventListener("click", e => {
-  const carta = e.target.closest("#contenedorprodrecomendado");
+  console.log("hgola")
+  const carta = e.target.closest(".contenedorprodrecomendado");
   if (!carta) return;
 
   const id = carta.dataset.id;
   window.location.href = `producto.html?id=${id}`;
 });
-
-
-
-// imagen modal
-  const logo = document.getElementById("logo");
-  const lightbox = document.getElementById("lightbox");
-
-  logo.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-  });
-
-  lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
-  });
-
 
 //corren en el dom
   document.addEventListener("DOMContentLoaded", () => {
