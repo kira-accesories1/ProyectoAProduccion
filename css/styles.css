@@ -1,3 +1,8 @@
+* {
+  overscroll-behavior: none;
+}
+
+
 html, body {
   height: 100dvh;
   margin: 0;
@@ -9,7 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  min-height: 100%;
+  min-height: 100dvh;
 }
 
 main {
@@ -60,6 +65,16 @@ main {
   height: 35px;
 }
 
+/* Logo clickeable */
+#logo {
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#logo:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
 
 
 .navLogoDiv {
