@@ -60,16 +60,6 @@ main {
   height: 35px;
 }
 
-/* Logo clickeable */
-#logo {
-  cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-#logo:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
 
 
 .navLogoDiv {
@@ -188,13 +178,6 @@ color: #e47fae !important;
 .nav-link {
 color: white ;
 }
-
-  /* .imagenSuperpuesta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  } */
 
   .precioFiltro {
     width: 70% !important;
