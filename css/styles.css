@@ -289,8 +289,7 @@ color: white ;
   height: 50px;
   color: white;
   display: flex;
-  justify-content: center; /* centra horizontal */
-  align-items: center;     /* centra vertical */
+
   font-size: 1.25rem;
 }
 
