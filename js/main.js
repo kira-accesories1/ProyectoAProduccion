@@ -194,6 +194,10 @@ menuCards.addEventListener("click", e => {
   window.location.href = `pages/producto.html?id=${id}`;
 });
 
+[...document.body.querySelectorAll("*")].filter(el => {
+  return el.scrollWidth > document.documentElement.clientWidth;
+});
+
 
 
 
