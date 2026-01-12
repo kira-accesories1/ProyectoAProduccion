@@ -38,6 +38,7 @@ main {
   bottom: 50px;
   right: max(20px, env(safe-area-inset-right));
   width: 60px;
+  max-width: calc(100vw - 40px);
   height: 60px;
   background-color: #25d366;
   border-radius: 50%;
