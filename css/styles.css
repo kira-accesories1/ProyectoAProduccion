@@ -2,7 +2,6 @@ html, body {
   height: 100dvh;
   margin: 0;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
