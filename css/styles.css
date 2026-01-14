@@ -54,7 +54,7 @@ main {
   transform: translateZ(0); /* 🔑 fuerza render en viewport */
   will-change: transform;
 
-  max-width: 100vw;
+  max-width: calc(100vw - 40px);
   overflow: hidden;
 }
 
@@ -581,6 +581,10 @@ color: white ;
 #contenedorinfoprodpagina {
   width: auto;
 }
+
+.whatsapp-float {
+  right: auto;
+  left: 270px;
 }
 
 @media (width<550px) {
