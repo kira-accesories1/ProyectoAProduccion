@@ -403,6 +403,11 @@ color: white ;
   font-size: 0.6rem;
   height: 30px;
 }
+
+.whatsapp-float {
+  bottom: auto;
+  top: 80dvh;
+  }
 }
 
 @media (width<415px){
