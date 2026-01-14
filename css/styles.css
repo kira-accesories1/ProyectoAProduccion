@@ -362,6 +362,12 @@ color: white ;
   font-size: 0.75rem;
   height: 30px;
 }
+
+.contenedor {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
 }
 
 @media (width<600px){
@@ -398,6 +404,37 @@ color: white ;
   height: 30px;
 }
 }
+
+@media (width<415px){
+.whatsapp-float {
+  right: auto;
+  left: 310px;
+  }
+}
+
+@media (width<395px){
+.whatsapp-float {
+  right: auto;
+  left: 290px;
+  }
+}
+
+@media (width<380px){
+.whatsapp-float {
+  right: auto;
+  left: 275px;
+  }
+}
+
+@media (width<370px){
+.whatsapp-float {
+  right: auto;
+  left: 265px;
+  }
+}
+
+
+
 
 
 
@@ -582,9 +619,6 @@ color: white ;
   width: auto;
 }
 
-.whatsapp-float {
-  right: auto;
-  left: 270px;
 }
 
 @media (width<550px) {
