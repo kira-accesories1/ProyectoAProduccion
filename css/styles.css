@@ -33,6 +33,12 @@ main {
     background-color: transparent;
 }
 
+.titulo-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
 .whatsapp-float {
   position: fixed;
   bottom: 50px;
@@ -406,7 +412,7 @@ color: white ;
 
 .whatsapp-float {
   bottom: auto;
-  top: 80dvh;
+  top: 85dvh;
   }
 }
 
