@@ -85,8 +85,6 @@ function renderizarProductos(productos) {
     return;
   }
 
-  footer.classList.remove("footerproductosVacios");
-
   productos.forEach(p => putProductos(p));
 }
 
@@ -151,7 +149,6 @@ function productosVacios() {
       No hay productos.
     </p>
   `;
-  footer.classList.add("footerproductosVacios");
 }
 
 

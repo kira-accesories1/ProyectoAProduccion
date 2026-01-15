@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
+  min-height: 100dvh;
 }
 
 main {
@@ -243,6 +244,7 @@ color: white ;
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
+  min-height: 100%;
 }
 
 .fotoprod {
@@ -294,17 +296,8 @@ color: white ;
     0 0 2px rgba(0, 0, 0, 1);
 }
 
-.footerproductosVacios {
-  background-color: black;
-  width: 100%;
-  height: 50px;
-  color: white;
-  display: flex;
-  justify-content: center; /* centra horizontal */
-  align-items: center;     /* centra vertical */
-}
-
 #footer {
+  bottom: 0;
   background-color: black;
   width: 100%;
   height: 50px;
@@ -312,7 +305,6 @@ color: white ;
   display: flex;
   font-size: 1.25rem;
 }
-
 
 .cartaproducto {
   margin: 1%;
@@ -336,6 +328,9 @@ color: white ;
   height: 45px;
 }
 
+#titulo {
+  margin-top: 8rem;
+}
 }
 
 @media (width<900px){
@@ -379,6 +374,10 @@ color: white ;
 }
 
 @media (width<600px){
+#titulo {
+  margin-top: 4rem;
+}
+  
   #logo {
     height: 45px;
     width: 49px;
