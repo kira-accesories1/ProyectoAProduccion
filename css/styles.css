@@ -28,7 +28,7 @@ main {
 }
 
 .background {
-    background-image: url('../media/fondoAnto3.jpg');
+    background-image: url('../media/fondoAnto.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -234,7 +234,6 @@ color: white ;
     0 0 3px rgba(0, 0, 0, 1),
     0 0 6px rgba(0, 0, 0, 1),
     0 0 12px rgba(0, 0, 0, 1),
-
     /* blur rosa abajo a la derecha */
     20px 20px 4px #e47fae;
 }
@@ -311,15 +310,9 @@ color: white ;
   height: 50px;
   color: white;
   display: flex;
-
   font-size: 1.25rem;
 }
 
-.fondoForm{
-  background-color: white;
-  border-radius: 1%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-}
 
 .cartaproducto {
   margin: 1%;
