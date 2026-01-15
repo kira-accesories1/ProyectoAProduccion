@@ -84,6 +84,8 @@ main {
 #logo {
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
+  width: 60px;
+  height: 55px;
 }
 
 #logo:hover {
@@ -568,8 +570,6 @@ color: white ;
   #cartapagina {
     margin-left: 3%;
     margin-right: 3%;
-    margin-top: 4rem;
-    margin-bottom: 6rem;
   }
 
   #contenedorimgrecomendadas {
@@ -610,8 +610,6 @@ color: white ;
   #cartapagina {
     margin-left: 2%;
     margin-right: 2%;
-    margin-top: 6rem;
-    margin-bottom: 4rem;
   }
 
 #contenedorimgrecomendadas {
