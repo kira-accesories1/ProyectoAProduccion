@@ -127,39 +127,6 @@
     <div class="offcanvas-body">
       <ul class="navbar-nav fs-5 justify-content-evenly">
 
-      <li class="nav-item">
-        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#menuProductos">
-          Productos ▾
-        </a>
-      </li>
-
-      <!-- MENÚ DESPLEGABLE QUE EMPUJA -->
-      <div class="collapse bg-dark" id="menuProductos">
-        <ul class="nav flex-column text-start py-2">
-          <li class="nav-item">
-            <a class="nav-link" href="?tipo=Pulsera">Pulsera</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?tipo=Aros">Aros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?tipo=Collar">Collar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?tipo=Tobillera">Tobillera</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?tipo=Anillo">Anillo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?tipo=Strap phone">Strap phone</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?tipo=Otros">Otros</a>
-          </li>
-        </ul>
-      </div>
-
         <li class="nav-item">
           <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalEntregas">Entregas</a>
         </li>
@@ -237,6 +204,66 @@
               <h1 class="text-center resaltado text-white fuente animate__animated animate__rubberBand">
                 Kira accesorios
               </h1>
+            </div>
+          </div>
+
+          <div id="conceptos" class="conceptos-container">
+
+            <div class="conceptos-tabs">
+              <button class="concepto" data-concepto="unicos">Únicos</button>
+              <button class="concepto" data-concepto="personalizables">Personalizables</button>
+              <button class="concepto activo" data-concepto="souvenirs">Souvenirs</button>
+            </div>
+
+              <div class="conceptos-descripcion">
+                <p class="textoConceptoDescr">
+                  Color, talle, diseño y temática personalizables. Precio según la cantidad.
+                </p>
+              </div>
+
+            <div class="tipoProd">
+              <a href="#" class="textoConcepto" data-bs-toggle="collapse" data-bs-target="#tipoProductos">
+              Tipo ▾
+              </a>
+            </div>
+
+            <!-- MENÚ DESPLEGABLE QUE EMPUJA -->
+            <div class="collapse listaProds" id="tipoProductos">
+                <button class="tipoProd activo" data-concepto="Pulsera">
+                  <a class="textoConcepto" href="?tipo=Pulsera">
+                    Pulsera
+                  </a>
+                </button>
+                <button class="tipoProd" data-concepto="Aros">
+                  <a class="textoConcepto" href="?tipo=Aros">
+                    Aros
+                  </a>
+                </button>
+                <button class="tipoProd" data-concepto="Collar">
+                  <a class="textoConcepto" href="?tipo=Collar">
+                    Collar
+                  </a>
+                </button>
+                <button class="tipoProd" data-concepto="Tobillera">
+                  <a class="textoConcepto" href="?tipo=Tobillera">
+                    Tobillera
+                  </a>
+                </button>
+                <button class="tipoProd" data-concepto="Anillo">
+                  <a class="textoConcepto" href="?tipo=Anillo">
+                    Anillo
+                  </a>
+                </button>
+                <button class="tipoProd" data-concepto="Strap phone">
+                  <a class="textoConcepto" href="?tipo=Strap phone">
+                    Strap-phone
+                  </a>
+                </button>
+                <button class="tipoProd" data-concepto="Otros">
+                  <a class="textoConcepto" href="?tipo=Otros">
+                    Otros
+                  </a>
+                </button>
             </div>
           </div>
 

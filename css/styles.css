@@ -239,6 +239,88 @@ color: white ;
     20px 20px 4px #e47fae;
 }
 
+.conceptos-container {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conceptos-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.concepto {
+  background: transparent;
+  border: 1px solid #fff;
+  color: black;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.concepto:hover {
+  background-color: white;
+}
+
+.tipoProd {
+  background: transparent;
+  border: 1px solid #fff;
+  color: black;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 10vw;
+  height: auto  ;
+}
+
+.tipoProd:hover {
+  background-color: white;
+}
+
+.listaProds {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  background: transparent;
+}
+
+
+.concepto.activo {
+  background: white;
+  color: black;
+  font-weight: 600;
+}
+
+.textoConcepto {
+  color: black;
+  text-decoration: none;
+}
+
+.conceptos-descripcion {
+  margin: 0 auto;
+  color: black;
+  font-size: 1.5rem;
+  padding: 0 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    text-shadow:
+    /* contorno / legibilidad */    
+    0 0 1px white,
+    0 0 3px white,
+    0 0 6px white
+}
+
+
 .contenedor {
   box-sizing: border-box;
   width: 80%;

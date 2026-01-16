@@ -137,6 +137,27 @@ function putProductos(producto) {
                 `;                
 }
 
+/* ===============================
+   CONCEPTOS
+================================ */
+
+const textos = {
+  unicos: "Cada pieza es única y hecha a mano, pensada para destacar y no repetirse.",
+  personalizables: "Podés elegir colores, diseños, nombres y combinaciones según tu gusto.",
+  souvenirs: "Ideales para cumpleaños y eventos. Se realizan por pedido y por cantidad."
+};
+
+document.querySelectorAll(".concepto").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".concepto").forEach(b => b.classList.remove("activo"));
+    btn.classList.add("activo");
+
+    const concepto = btn.dataset.concepto;
+    document.querySelectorAll(".textoConceptoDescr").textContent = textos[concepto];
+  });
+});
+
+
 
 /* ===============================
    SIN PRODUCTOS
