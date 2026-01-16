@@ -33,14 +33,12 @@ async function cargarProductos() {
   const elemStock = document.getElementById("stock")?.value;
   const ordenPrecio = document.getElementById("ordenPrecio")?.value || "Sin ordenar";
 
-  let query = supabase
-    .from("TablaProductos")
-    .select("*");
-
   /* 🔤 texto */
-  if (texto) {
-    query = query.ilike("nombre", `%${texto}%`);
-  }
+  let  query = supabase.rpc("buscar_productos", {
+  query: texto
+  });
+  
+
 
   /* 💰 precio */
   query = query.gte("precio", precioMin).lte("precio", precioMax);

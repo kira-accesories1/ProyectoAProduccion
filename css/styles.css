@@ -250,6 +250,7 @@ color: white ;
 .fotoprod {
   width: 100%;
   height: auto;
+  aspect-ratio: 9 / 16;
   transition: opacity 0.3s ease;
 }
 
@@ -436,11 +437,11 @@ color: white ;
 }
 
 #contenedorimgrecomendadas {
-  height: 12vh;
-  margin-left: 15%;
-  margin-right: 10%;
-  display: flex;
-  flex-direction: row;
+  margin-bottom: 12vh;
+  margin-left: 7%;
+  margin-right: 7%;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0, 1fr));
   max-height: 100%;
   gap: 2%;
 }
@@ -448,8 +449,8 @@ color: white ;
 .contenedorprodrecomendado {
   display: flex;
   flex-direction: row;
-  width: 32%;
   box-sizing: border-box;
+  margin-top: 1.5rem;
 }
 
 .recomendada {
@@ -462,11 +463,16 @@ color: white ;
   padding-left: 0.5rem;
 }
 
-.imgprodrecomendada {
+.contimgprodrecomendada {
   height: auto;
-  width: 30%;
+  width: 34%;
   box-sizing: border-box;
-  padding-right: 1rem;
+}
+
+.imgprodrecomendada {
+  aspect-ratio: 7 / 8;
+  height: 100%;
+  max-width: 100%;
 }
 
 .textorecomendada {
@@ -482,7 +488,6 @@ color: white ;
   flex-direction: row;
   box-sizing: border-box;
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 #contenedorinfoprodpagina {
@@ -503,6 +508,7 @@ color: white ;
 }
 
 .imgprodpagina {
+  aspect-ratio: 9 / 16;
   height: 100%;
 }
 
@@ -512,7 +518,7 @@ color: white ;
 }
 
 .botonpagina{
-  width: 70%;
+  width: 85%;
 }
 
 
@@ -524,26 +530,19 @@ color: white ;
 }
 
 
+@media (width<1200px) {
+.imgprodrecomendada {
+  aspect-ratio: 3 / 4;
+}
+}
+
 @media (width<950px) {
   #cartapagina {
     height: 44vh;
     margin-left: 7%;
     margin-right: 7%;
     margin-top: 2rem;
-    margin-bottom: 2rem;
   }
-
-  #contenedorimgrecomendadas {
-  margin-left: 7%;
-  margin-right: 7%;
-}
-
-.imgprodrecomendada {
-  height: auto;
-  width: 40%;
-  box-sizing: border-box;
-  padding-right: 0;
-}
 
   .textosinfopagina{
   font-size: 16px;
@@ -555,8 +554,17 @@ color: white ;
   padding-bottom: 1rem;
   padding-top: 0.5rem;
 }
+
+.imgprodrecomendada {
+  aspect-ratio: 5 / 8;
+}
 }
 
+@media (width<750px) {
+.imgprodrecomendada {
+  aspect-ratio: 9 / 16;
+}
+}
 
 @media (width<700px) {
   #cartapagina {
@@ -592,10 +600,9 @@ color: white ;
   width: auto;
 }
 
-#contenedorinfoprodpagina {
-  width: auto;
+.imgprodpagina {
+  aspect-ratio: 1 / 2;
 }
-
 }
 
 @media (width<550px) {
@@ -605,26 +612,50 @@ color: white ;
   }
 
 #contenedorimgrecomendadas {
-  height: 20vw;
-  min-height: 6rem;
   margin-left: 2%;
   margin-right: 2%;
 }
 
 #titulorecomendados {
   font-size: 30px;
+  margin-bottom: 0;
 }
 
 .textorecomendada {
   font-size: 11px;
 }
 
-.imgprodrecomendada {
+.contimgprodrecomendada {
   width: auto;
+  max-width: 30%;
 }
 
 .recomendada {
   padding-right: 0.2rem;
   padding-left: 0.2rem;
+}
+
+.imgprodpagina {
+  aspect-ratio: 5 / 12;
+}
+}
+
+@media (width<450px) {
+#contenedorinfoprodpagina {
+  width: auto;
+}
+
+  #titulocartaprodpagina {
+  font-size: 5vw;
+}
+
+.textorecomendada {
+  font-size: 2.5vw;
+}
+}
+
+@media (width<365px) {
+.textorecomendada {
+  font-size: 2.4vw;
 }
 }

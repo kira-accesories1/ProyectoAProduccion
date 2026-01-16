@@ -66,7 +66,7 @@ async function cargarRecomendados(idProducto) {
   const { data:recomendados, error:error2 } = await supabase
     .rpc("get_recomendados", {
       producto_id: idProducto,
-      limite: 3
+      limite: 6
     });
 
   if (error2) {
@@ -87,10 +87,13 @@ function renderizarRecomendados(productos) {
         data-id=${p.id}
         style="cursor:pointer"
         >
-        <img src="${p.imagen_path}" class="imgprodrecomendada">
+        <div class="contimgprodrecomendada">
+          <img src="${p.imagen_path}" class="imgprodrecomendada">    
+        </div>
+
         <div class="recomendada justify-content-between">
             <p class="text-center textorecomendada">${p.nombre}</p>
-            ${p.enFalta ? "<p class='text-center textorecomendada'>Sin stock</p>":"<p class='text-center textorecomendada'>Disponible</p>"}
+            <p class="text-center textorecomendada">Tipo: ${p.tipoprod}</p>
             <p class="text-center textorecomendada">$${p.precio}</p>
         </div>
       </div>
